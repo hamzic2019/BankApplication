@@ -3,7 +3,7 @@ import java.util.Date;
 
 public class User {
     private String name;
-    private String username;
+    String username;
     private double balance;
 
     private ArrayList<String> transactions = new ArrayList<>();
@@ -44,6 +44,11 @@ public class User {
 
     public void depositMoney(double amount){
         this.balance += amount;
+    }
+
+    @Override
+    public String toString(){
+        return "User: " + name + ", Username: " + username + ", Balance: " + balance;
     }
 
 }
